@@ -40,4 +40,4 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 
 ## About Me
 Hi there! I'm **[Abdulrahman Ayman Farag]**, a Data Engineer/Analyst passionate about turning raw data into meaningful stories. 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/abdelrhman-ayman-45b854361?utm_source=share_via&utm_content=profile&utm_medium=member_android)] or check my other projects!
+Feel free to connect with me on [[LinkedIn](https://www.linkedin.com/in/abdelrhman-ayman-45b854361?utm_source=share_via&utm_content=profile&utm_medium=member_android)] or check my other projects!
