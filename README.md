@@ -1,35 +1,65 @@
-# Data Warehouse and Analytics Project
+# Data Warehouse and Analytics Project (SQL Edition) 🚀
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a robust data infrastructure to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
-
----
-
-## Project Requirements
-
-### ### Building the Data Warehouse (Data Engineering)
-
-#### #### Objective
-Develop a modern data warehouse using **SQL Server** to consolidate sales data from multiple sources, enabling analytical reporting and informed decision-making.
-
-#### #### Specifications
-* **Data Sources:** Import data from two source systems (**ERP** and **CRM**) provided as CSV files.
-* **Data Quality:** Cleanse, transform, and resolve data quality issues prior to analysis.
-* **Integration:** Combine both sources into a single, user-friendly data model (Star Schema) designed for analytical queries.
-* **Scope:** Focus on the latest dataset to provide a "Single Source of Truth."
-* **Documentation:** Provide clear documentation of the data model to support business stakeholders.
+Welcome to the **Data Warehouse and Analytics Project** repository! 🏗️
+This project showcases a complete end-to-end Data Engineering solution built entirely using **SQL Server** and **T-SQL**, focusing on building a robust Medallion Architecture.
 
 ---
 
-### ### BI: Analytics & Reporting (Data Analytics)
+## 📖 Project Overview
+This project involves building a modern data warehouse using the **Medallion Architecture** (Bronze, Silver, and Gold layers).
 
-#### #### Objective
-Develop SQL-based analytics and dashboards to deliver detailed insights into:
-* **Customer Behavior:** Understanding purchasing patterns and segments.
-* **Product Performance:** Identifying top-selling products and categories.
-* **Sales Trends:** Analyzing revenue growth over time.
+1. **Data Architecture**: Designing a 3-tier warehouse for structured data using SQL Schemas.
+2. **ETL Pipelines**: Automating data movement and logic using **Stored Procedures**.
+3. **Data Modeling**: Developing Fact and Dimension tables (Star Schema) with primary/foreign key relationships.
+4. **Analytics & Reporting**: Creating SQL-based data quality checks and views for business insights.
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+---
+
+## 🏗️ Data Architecture
+The data flows through three main stages as shown in the diagram below:
+
+![Data Architecture Diagram](docs/Architecutre.png) 
+
+1. **Bronze Layer**: Raw data ingestion into SQL tables using `TRUNCATE` and `INSERT` logic.
+2. **Silver Layer**: Data cleansing, standardization, and business logic implementation via SQL Scripts.
+3. **Gold Layer**: Business-ready data modeled into a **Star Schema** for high-performance reporting.
+
+---
+
+## 🛠️ Tools & Technologies
+- **Database**: SQL Server Express
+- **Language**: T-SQL (Stored Procedures, Views, Functions)
+- **Management Tool**: SQL Server Management Studio (SSMS)
+- **Documentation**: Draw.io (for diagrams)
+- **Version Control**: Git & GitHub
+
+---
+
+## 📂 Repository Structure
+```text
+sql-data-warehouse/
+│
+├── datasets/                           # Raw CSV files (Source data for bulk insert)
+│
+├── docs/                               # Project documentation and architecture details
+│   ├── data_architecture.png           # Architecture diagram (Medallion Layers)
+│   ├── data_catalog.md                 # Metadata and field descriptions
+│   └── ERD_diagram.png                 # Entity Relationship Diagram (Star Schema)
+│
+├── scripts/                            # SQL ETL Pipeline
+│   ├── bronze/                         # Stored Procedures for loading raw data
+│   │   └── proc_load_bronze.sql
+│   ├── silver/                         # Procedures for cleaning and transformation
+│   │   └── proc_load_silver.sql
+│   └── gold/                           # Procedures for creating Fact & Dimension tables
+│       └── proc_load_gold.sql
+│
+├── tests/                              # Data Quality & Validation scripts
+│   └── quality_checks.sql              # SQL queries to validate data integrity
+│
+├── README.md                           # Project overview and instructions
+└── LICENSE                             # MIT License information
+```
 
 ---
 
